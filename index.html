@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       	<meta name="name" content="Harold Suquillo">
+		<meta name="description" content="Webpage that converts between metric and imperial units">
+		<title>Unit Converter</title>
+		<link rel="stylesheet" href="index.css" type="text/css">
+	</head>
+	<body>
+        <section id="header-container">
+            <h1 id="title">Metric/Imperial Unit Converter</h1>
+            <div id="form-container">
+                <form onkeydown="return event.key != 'Enter';">
+                    <input  id="input-num" type="number" value="" oninput="convert()" autocomplete="off" autofocus v-on:submit.prevent>
+            </div>
+            <p id="error">Enter a number</p>
+            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1440 210" >
+                <path fill="#1F2937" fill-opacity="1" d="M0,160L48,133.3C96,107,192,53,288,48C384,43,480,85,576,122.7C672,160,768,192,864,192C960,192,1056,160,1152,133.3C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </section>
+
+        <section id="conversion-container"> 
+            <section class="conversion-instance">
+                <p class="conv-header">Length (Meter/Feet)</p>
+                <p class="result" id="length"></p>
+            </section>
+            <section class="conversion-instance">
+                <p class="conv-header">Volume(Liter/Gallons)</p>
+                <p class="result" id="volume"></p>
+            </section>
+            <section class="conversion-instance">
+                <p class="conv-header">Mass(Kilogram/Pounds)</p>
+                <p class="result" id="mass"></p>
+            </section>
+        </section>
+	</body>
+    <script src="index.js"></script>
+</html>
